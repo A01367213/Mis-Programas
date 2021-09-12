@@ -1,0 +1,7 @@
+myDB
+	Encriptación: 
+	
+	Muestra como formar una base de datos con contraseña encriptada. Los comandos
+	que se pueden emplear para hacer la encriptación y obtener la información de
+	estos. Vease http://doc.docs.sk/mysql-refman-5.5/encryption-functions.html
+	para más información.

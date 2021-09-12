@@ -1,0 +1,15 @@
+CREATE TABLE Users(
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255),
+    comment VARCHAR(255),
+    reg_date TIMESTAMP DEAFULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
+
+
+INSERT INTO Users (name, password, comment) VALUES ('Horacio', sha('ies'), 'SAO');
+INSERT INTO Users (name, password, comment) VALUES ('Us2', sha('no'), 'Yii');
+INSERT INTO Users (name, password, comment) VALUES ('Us3', sha('csm'), 'Wii');
+INSERT INTO Users (name, password, comment) VALUES ('Us4', sha('coco'), 'NOU');
+INSERT INTO Users (name, password, comment) VALUES ('Us5', sha('iwannabe'), 'COCOA');
+
+SELECT * FROM Users WHERE name = 'Horacio' AND password = sha('ies');
