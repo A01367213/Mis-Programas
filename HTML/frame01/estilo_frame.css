@@ -1,0 +1,27 @@
+h1{
+    background: #aed6f1;
+    color: blue;
+    text-align: center;
+    width: 90%;
+    border-radius: 16px;
+}
+button{
+    background: #aed6f1;
+    color: blue;
+    border-radius: 7px;
+    width: 200px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+button:hover{
+    background: blue;
+    color: #aed6f1;
+    
+}
+
+.bienvenida{
+    font-size: 30pt;
+    font-weight: bold;
+    color: blue;
+}

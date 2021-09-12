@@ -1,0 +1,116 @@
+# Juan Pablo Ortiz A01366969
+# Horacio Lamas Arellano A01367213
+
+#------------------Programa 1 -----------------------------
+
+#!/bin/bash
+
+echo "Escriba el nombre del archivo";
+read arch;
+
+if [[ $arch = *.txt ]]; then
+	echo "Escriba la palabra a buscar";
+	read w;
+	echo "";
+
+	mapfile -t a < <(grep -wi $w $arch);
+	#echo "${a[3]}"
+	if [[ ${#a[@]} -gt 5 ]]; then
+		x=0;
+		while [ $x -lt 5 ]; do
+			echo "${a[$x]}";
+			x=$(( $x + 1 ));
+		done;
+	
+	elif [[ ${#a[@]} -eq 0 ]]; then
+		echo "Sin coincidencias";
+
+	else
+		printf "%s\n" "${a[@]}";
+	fi;
+
+else
+	echo "El archivo no es .txt";
+
+fi;
+
+#--------------Programa 2 ------------------
+
+#!/bin/bash
+
+echo "Introduce el nombre del archivo: ";
+read arch;
+echo "";
+echo "Ordenar en orden ascendente (-a)";
+echo "Ordenar en orden descendente (-z)";
+echo "Escriba como desea ordenar el archivo: ";
+read ord
+echo "";
+
+if [[  $ord = "-a" ]]; then
+	printf "%s\n" "$(cat $arch | sort)";
+	
+elif [[ $ord = "-z" ]]; then
+	printf "%s\n" "$(cat $arch | sort -r)";
+	
+fi;
+
+#----------------Programa 3-------------
+
+#!/bin/bash
+
+echo "Nombre del archivo: ";
+read arch;
+
+if [[ $arch = *.tar ]]; then
+	$(rm $arch)
+
+else
+	$(tar cf ACC.tar $arch)
+
+fi;
+
+#------------Programa 4-------------------
+
+#!/bin/bash
+
+echo "Ingresa el numero: ";
+read n;
+echo "";
+
+i=1;
+while [ $i -le 10 ]; do
+	r=$(( $n * i ));
+	echo "$r";
+	i=$(( $i + 1 ));
+done;
+
+#-------------Programa 5-------------
+
+#!/bin/bash
+echo "Para ejecutar todos los programas, introduzca 'T'";
+echo "Programa 1: T11";
+echo "Programa 2: T21";
+echo "Programa 3: T31";
+echo "Programa 4: T41";
+
+shopt -s expand_aliases
+alias  T11='bash T11.sh'
+alias  T21='bash T21.sh'
+alias  T31='bash T31.sh'
+alias  T41='bash T41.sh'
+alias  T='bash T11.sh && bash T21.sh && bash T31.sh && bash T41.sh'
+
+read op;
+if [[ $op = 'T11' ]]; then
+	T11
+elif [[ $op = 'T21' ]]; then
+	T21
+elif [[ $op = 'T31' ]]; then
+	T31
+elif [[ $op = 'T41' ]]; then
+	T41
+elif [[ $op = 'T' ]]; then
+	T
+
+fi;

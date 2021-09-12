@@ -1,0 +1,6 @@
+
+
+
+SELECT Alumno.matricula, Alumno.nombre, cveCurso, Curso.nombre 
+	FROM (Alumno JOIN Cursa ON Alumno.matricula=Cursa.matricula) JOIN Curso ON cveCurso=clave
+	WHERE Alumno.matricula=111444;

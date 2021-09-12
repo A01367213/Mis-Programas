@@ -1,0 +1,23 @@
+#lang racket
+
+#|(define (fib n)
+  (if (<= n 2)
+      1
+      (+ (fib (- n 1)) (fib (- n 2))))
+  )
+
+(fib 10)|#
+
+(define (fibas n)
+  (fibcola n 0 1))
+
+(define (fibcola n a b)
+  (if (= n 0 )
+      a
+      (if (= n 1)
+          b
+          (fibcola (- n 1) b (+ a b))))
+  )
+(fibas 10)
+
+

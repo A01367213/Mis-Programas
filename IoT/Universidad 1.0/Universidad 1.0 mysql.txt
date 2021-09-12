@@ -1,0 +1,61 @@
+CREATE DATABASE Universidad2
+
+CREATE TABLE Departamento(numero  VARCHAR(5)  NOT NULL,
+			  nombre  VARCHAR(30) NOT NULL,
+			  admin	  VARCHAR(10) NOT NULL,
+			  fInicio DATE	      NOT NULL,
+			  FOREIGN KEY (admin) REFERENCES Profesor (clave),
+			  PRIMARY KEY (numero));
+
+
+CREATE TABLE Profesor(clave	   VARCHAR(10)  NOT NULL,
+		      nombre	   VARCHAR(20) NOT NULL,
+		      fNacimiento  DATE	       NOT NULL,
+		      direccion	   VARCHAR(15) NOT NULL,
+		      nDep	   VARCHAR(5) NOT NULL,
+		      salario	   VARCHAR(6)  NOT NULL,
+		      PRIMARY KEY (clave));
+
+**ALTER TABLE Profesor ADD FOREIGN KEY(nDep) REFERENCES Departamento(numero);
+
+
+
+CREATE TABLE Alumno(matricula VARCHAR(10) NOT NULL,
+		    nombre    VARCHAR(20) NOT NULL,
+		    carrera   VARCHAR(5)  NOT NULL,
+		    plan      VARCHAR(5)  NOT NULL,
+		    direccion VARCHAR(20) NOT NULL,
+		    telefono  VARCHAR(15) NOT NULL,
+		    PRIMARY KEY (matricula));
+
+CREATE TABLE Curso(clave    VARCHAR(10) NOT NULL,
+                   nombre   VARCHAR(30) NOT NULL,
+                   semestre VARCHAR(2)  NOT NULL,
+		   nDep	    VARCHAR(5)	NOT NULL,
+		   FOREIGN KEY (nDep) REFERENCES Departamento(numero),
+                   PRIMARY KEY(clave,nDep));
+
+CREATE TABLE Cursa(matricula VARCHAR(10) NOT NULL,
+		   cveCurso  VARCHAR(10) NOT NULL,
+		   grupo     VARCHAR(2)  NOT NULL,
+		   salon     VARCHAR(4)  NOT NULL,
+		   horario   VARCHAR(5)  NOT NULL,
+		   cFinal    INT	 NOT NULL,
+		   FOREIGN KEY(matricula) REFERENCES Alumno(matricula),
+		   FOREIGN KEY(cveCurso)  REFERENCES Curso(clave),
+		   PRIMARY KEY(matricula,cveCurso));
+
+CREATE TABLE Imparte(cveProfesor VARCHAR(10) NOT NULL,
+		     cveCurso    VARCHAR(10) NOT NULL,
+		     grupo       VARCHAR(2)  NOT NULL,
+		     salon       VARCHAR(4)  NOT NULL,
+		     horario     VARCHAR(5)  NOT NULL,
+		     FOREIGN KEY(cveProfesor) REFERENCES Profesor(clave),
+		     FOREIGN KEY(cveCurso)  REFERENCES Curso(clave),
+		     PRIMARY KEY(cveCurso,grupo));
+
+CREATE TABLE Especialidad(cveProfesor VARCHAR(10) NOT NULL,
+			  grado	      VARCHAR(10) NOT NULL,
+			  FOREIGN KEY(cveProfesor) REFERENCES Profesor(clave),
+			  PRIMARY KEY(cveProfesor,grado));
+

@@ -1,0 +1,34 @@
+CREATE DATABASE Hospital;
+
+CREATE TABLE Doctor(clave	 VARCHAR(7)  NOT NULL,
+		    nombre	 VARCHAR(20) NOT NULL,
+		    direccion	 VARCHAR(15) NOT NULL,
+		    telefono	 VARCHAR(15) NOT NULL,
+		    consultorio	 VARCHAR(5)  NOT NULL,
+		    especialidad VARCHAR(15) NOT NULL,
+		    PRIMARY KEY (clave));
+
+
+CREATE TABLE Paciente(clave	   VARCHAR(7)  NOT NULL,
+		      nombre	   VARCHAR(20) NOT NULL,
+		      direccion	   VARCHAR(15) NOT NULL,
+		      telefono	   VARCHAR(15) NOT NULL,
+		      PRIMARY KEY (clave));
+
+
+CREATE TABLE Atiende(claveD	  VARCHAR(7)  NOT NULL,
+		     claveP	  VARCHAR(7)  NOT NULL,
+		     fecha	  DATE	      NOT NULL,
+		     diagnostico  VARCHAR(20) NOT NULL,
+		     tratamiento  VARCHAR(12) NOT NULL,
+		     FOREIGN KEY(claveD) REFERENCES Doctor(clave),
+		     FOREIGN KEY(claveP) REFERENCES Paciente(clave),
+		     PRIMARY KEY (claveD,claveP,fecha));
+
+CREATE TABLE Analisis(claveP	   VARCHAR(7)  NOT NULL,
+		      tipo	   VARCHAR(7)  NOT NULL,
+		      fAplicacion  DATE	      NOT NULL,
+		      fEntrega	   VARCHAR(20) NOT NULL,
+		      descripción  VARCHAR(12) NOT NULL,
+		      FOREIGN KEY(claveP) REFERENCES Paciente(clave),
+		      PRIMARY KEY (claveP,tipo,fAplicacion));

@@ -1,0 +1,35 @@
+CREATE TABLE Cliente(nocta VARCHAR(8)       NOT NULL,
+                nombre VARCHAR(15) NOT NULL,
+                tipo VARCHAR(15)        NOT NULL,
+                saldo DECIMAL(8,2)      NOT NULL,
+                PRIMARY KEY (nocta));
+INSERT INTO Cliente VALUES('1122','DIANA SANCHEZ','CREDITO',5000);
+INSERT INTO Cliente VALUES('1133','EDGAR GOMEZ','INVERSION',15000);
+INSERT INTO Cliente VALUES('1144','EVELYN DIAZ','AHORRO',12000);
+INSERT INTO Cliente VALUES('1155','ALEJANDRA LOPEZ','INVERSION',20000);
+
+CREATE TABLE Deposito(ncta VARCHAR(8) NOT NULL, 
+                    tipo VARCHAR(15) NOT NULL, 
+                     saldoAnterior DECIMAL(8,2) NOT NULL,
+                    cantidad DECIMAL(7,2) NOT NULL,
+                    nuevoSaldo DECIMAL (8,2) NOT NULL,
+                    fechaTransaccion DATE NOT NULL,
+                    FOREIGN KEY(ncta) REFERENCES Cliente(nocta));
+
+
+CREATE TABLE Retiro(ncta VARCHAR(8) NOT NULL, 
+               tipo VARCHAR(15) NOT NULL, 
+                saldoAnterior DECIMAL(8,2) NOT NULL,
+                             cantidad DECIMAL(7,2) NOT NULL,
+                             nuevoSaldo DECIMAL (8,2) NOT NULL,
+               fechaTransaccion DATE NOT NULL,
+               FOREIGN KEY(ncta) REFERENCES Cliente(nocta));
+
+INSERT INTO Deposito VALUES('1133','INVERSION',15000,2000,17000,'2020-09-28');
+UPDATE Cliente SET saldo=saldo+2000 WHERE nocta='1133';
+
+INSERT INTO Retiro VALUES('1144','CREDITO',12000,2000,10000,'2020-09-27');
+UPDATE Cliente SET saldo=saldo-2000 WHERE nocta='1144';
+
+INSERT INTO Deposito VALUES('1133','INVERSION',17000,3000,20000,'2020-09-28');
+UPDATE Cliente SET saldo=saldo+3000 WHERE nocta='1133';

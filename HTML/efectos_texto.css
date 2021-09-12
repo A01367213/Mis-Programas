@@ -1,0 +1,35 @@
+h1{
+    color: white; /*Texto color blanco*/
+    background: #116ff0;
+    width: 90%;
+}
+
+.datos{
+    color:blue;
+    background: #b2bff7;
+    font-size: 16pt;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.texto16{
+    color: blue;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.boton_azul{
+    color: white;
+    font-size: 16pt;
+    border-radius: 16px;
+    font-weight: bold;
+    background-color: blue;
+    font-family: Kristen ITC;
+    width: 250pt;
+}
+
+.boton_azul:hover{
+    background-color: white;
+    color: #11bf56;
+}

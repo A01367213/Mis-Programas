@@ -1,0 +1,7 @@
+#lang racket
+(require math/array)
+
+(define mtx (array #[#[1 2] #[3 4]]))
+
+(display (array-ref mtx (vector 1 1)))
+

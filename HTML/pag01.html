@@ -1,0 +1,85 @@
+<html>
+    <head> <!--Indica acciones no visibles para usuario pero de configuración interna de nuestra página -->
+        <title>Página Web</title> <!-- Despliega nombre en la pestaña -->
+        <meta charset="utf-8"> <!-- Configuración de caracteres -->
+        <link href="icono.jpg" rel="shortcut icon" type="image/jpg"> <!-- Imagen en pestaña. Se definen 3 parámetros: referencia, relación y tipo -->
+        <!-- CSS -->
+        <style>
+            h3{
+                color:red;
+                text-decoration: underline;
+            }
+            
+            h1 {
+                color:aqua;
+            }
+            
+            .fondo_amarillo{
+                background: yellow;
+            }
+            
+            .texto_2_em{
+                font-size: 2em;
+            }
+            
+            .texto_3_em{
+                font-size: 3em;
+            }
+            
+            .texto_10_px{
+                font-size: 10px;
+            }
+            
+            .texto_11_pt{
+                font-size: 11pt;
+            }
+            
+            .texto_20_pt{
+                font-size: 20pt;
+            }
+            
+        </style>
+    </head>
+    <body> <!-- Cuerpo de la página. Elementos visibles por el usuario -->
+        <center> <!-- Centra el texto -->
+            <p> Hola clase, bienvenidos a HTML</p> <!--  -->
+            <p> Yíi </p>
+            <h1> Título Grande H1 </h1>
+            <h3> Título Regular H3 </h3>
+            <h5> Título <u>Pequeño</u> H5 </h5>
+            <h6> Título Peque H6 </h6>
+            <h3> Rojito </h3>
+            <br> <!-- Salto de línea. Abierta -->
+            <h1> Manejo de etiquetas de texto desde HTML </h1>
+            <p> Texto predeterminado </p>
+            <p><b> Texto en negritas </b></p>
+            <p><u> Texto subrayado </u></p>
+            <p><i> Texto en Itálicas</i></p>
+            <p><font size="3"> Texto con font 3</font> </p>
+            <p><font size="5"> Texto con font 5</font> </p>
+            <p><font size="7"> Texto con font 7</font> </p>
+            <p><font size="5"><b><i> Texto font 5 en negritas e itálicas </i></b></font></p>
+            <p class="fondo_amarillo"><font color="#11c4f0" size="5" face="Kristen ITC"><b>
+                Texto en font 5, color #11c4f0, fuente Kristen ITC
+                </b></font></p>
+            <h1>Este texto será <sup>Super índice</sup></h1>
+            <h1>Este texto será <sub>Sub índice</sub></h1>
+            <br>
+            <br>
+            <br>
+            <h1> Tamaño de los textos en diferentes unidades de medida</h1>
+            <p>Texto normal</p>
+            
+            <!-- Unidad relativa: em. Depende de la fuente. Toma como referencia la M -->
+            <p class="texto_2_em"> Texto en 2 em</p> 
+            <p class="texto_3_em"> Texto en 3 em</p>
+            
+            <!-- U absoluta: px -->
+            <p class="texto_10_px"> Texto en 10 px</p> 
+            
+            <!-- U absoluta: pts -->
+            <p class="texto_11_pt"> Texto en 11 pt</p> 
+            <p class="texto_20_pt"> Texto en 20 pt</p>
+        </center>
+    </body>
+</html>

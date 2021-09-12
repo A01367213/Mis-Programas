@@ -1,0 +1,38 @@
+.texto12{
+    color: green;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.texto14{
+    color: green;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.campo{
+    background: #1ca1c6;
+    border-radius: 5px;
+    color: green;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+h1{
+    color: white; /*Texto color blanco*/
+    background-color: #116ff0;
+    width: 40%;
+}
+
+.boton_azul{
+    color: white;
+    font-size: 12pt;
+    border-radius: 16px;
+    font-weight: bold;
+    background-color: blue;
+    font-family: Kristen ITC;
+    width: 150pt;
+}

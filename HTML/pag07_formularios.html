@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Formularios</title>
+        <meta charset="utf-8">
+        <link href="estilo_formulario.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body bgcolor='#cccccc'><center>
+        <table border="3">
+        <form name="f_forma">
+            <tr align="center"><td colspan="2"><h1>Formulario de Datos</h1></td></tr>
+            <tr>
+                <td><p class="texto14">Indica la matrícula</p></td>
+                <td><input name="mat" type="text" size="20" class="campo" maxlength="9"></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Indica la contraseña</p></td>
+                <td><input name="contra" type="password" size="20" class="campo" maxlength="10"></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Indica tu edad</p></td>
+                <td><input name="edad" type="number" size="20" class="campo" maxlength="3" min=0></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Indica tu Fecha de Nacimiento</p></td>
+                <td><input name="fn" type="date" size="20" class="campo"></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Indica tu Color Favorito</p></td>
+                <td><input name="cf" type="color" size="20" class="campo"></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Indica tu Genero</p></td>
+                <td align='center'>
+                    <table width=100%>
+                        <tr>
+                            <td><input name='genero' type="radio" value="1"></td>
+                            <td><p class="texto14"></p>Hombre</td>
+                        </tr>
+                        <tr>
+                            <td><input name='genero' type="radio" value="2"></td>
+                            <td><p class="texto14"></p>Mujer</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Selecciona tus animales favoritos</p></td>
+                <td align='center'>
+                    <table width=100%>
+                        <tr>
+                            <td><input name='a1' type="checkbox"></td>
+                            <td><p class="texto14"></p>Perro</td>
+                        </tr>
+                        <tr>
+                            <td><input name='a2' type="checkbox"></td>
+                            <td><p class="texto14"></p>Gato</td>
+                        </tr>
+                        <tr>
+                            <td><input name='a3' type="checkbox"></td>
+                            <td><p class="texto14"></p>Lobo</td>
+                        </tr>
+                        <tr>
+                            <td><input name='a4' type="checkbox"></td>
+                            <td><p class="texto14"></p>Aguila</td>
+                        </tr>
+                       
+                    </table>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Deja tus comentarios</p></td>
+                <td><textarea class='campo' name="comentarios"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td><p class="texto14">Selecciona tu pais favorito</p></td>
+                <td>
+                    <select name="pais" class="campo">
+                        <option>México</option>
+                        <option>México</option>
+                        <option>México</option>
+                        <option>México</option>
+                        <option>México</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr align='center'>
+                <td colspan="2"><input name='b_limpiar' type="reset" value="Limpiar formulario" class="boton_azul"></td>
+            </tr>
+        
+        </form>
+        </table>
+        </center>
+    </body>
+</html>

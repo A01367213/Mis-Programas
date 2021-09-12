@@ -1,0 +1,10 @@
+class cuenta
+
+nombre 
+nomuero de cuenta
+pais
+
+metodos
+depositar, sacar dinero, generar informe
+
+

@@ -1,0 +1,12 @@
+#lang racket
+
+(define(positives lst)
+  (+1))
+
+
+
+
+(define(add-list lst)
+  (apply + lst))
+
+
