@@ -5,18 +5,22 @@ using namespace std;
 
 class Actividad12{
     private:
+
+
+
+    public:
         int n, p, q;
         vector<int>monedas;
 
-    public:
         void obtenerDatos(){
             cin >> n;
             for (int i = 0; i < n; i++){
                 cin >> monedas[i];
             }
+            cout << endl;
             cin >> p;
             cin >> q;
-            imprimir();
+
         }
 
         void imprimir(){
@@ -30,4 +34,5 @@ class Actividad12{
 int main(){
     Actividad12 act;
     act.obtenerDatos();
+    act.imprimir();
 }
