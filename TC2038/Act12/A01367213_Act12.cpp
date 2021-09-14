@@ -5,26 +5,30 @@ using namespace std;
 
 class Actividad12{
     private:
-
-
-
-    public:
-        int n, p, q;
+        int num, valor, precio, pago;
         vector<int>monedas;
 
+    public:
+	
+	void dinamica(){
+
+	}
+
+
         void obtenerDatos(){
-            cin >> n;
-            for (int i = 0; i < n; i++){
-                cin >> monedas[i];
+            cin >> num;
+            for (int i = 0; i < num; i++){
+                cin >> valor;
+                monedas.push_back(valor);
             }
             cout << endl;
-            cin >> p;
-            cin >> q;
+            cin >> precio;
+            cin >> pago;
 
         }
 
         void imprimir(){
-			for (int i = 0; i < n; i++){
+			for (int i = 0; i < num; i++){
 				cout << monedas[i] << " ";
 			}
 			cout << endl;
