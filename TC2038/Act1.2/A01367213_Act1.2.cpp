@@ -16,6 +16,7 @@ class Dinamica{
 			for (int i = 0; i < n; i++){
 				cin >> valores[i];
 			}
+
 			//imprimir(valores, n);
 			cin >> p;
 			cin >> q;
