@@ -1,0 +1,8 @@
+Claves de Cursos:
+
+TC2007B : Integración de seguridad informática
+TC2038  : Análisis y diseño de algoritmos avanzados
+TC1004B : Implementación de Internet de las cosas
+TC2037  : Implementación de Métodos Computacionales
+TC1031  : Programación de Estructuras de Datos y Algoritmos Fundamentales
+
