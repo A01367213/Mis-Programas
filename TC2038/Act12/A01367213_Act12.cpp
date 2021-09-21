@@ -9,6 +9,7 @@ class Actividad12{
         //No. monedas, Valor monedas
         int num, valor, precio, pago;
         vector<int>monedas; //Lista de monedas
+        vector<int>listMon;
         int na = 1000000; //No aplica
         int mem[10000]; //Lista de valores calculados
 
@@ -36,16 +37,13 @@ class Actividad12{
         //cout << cambioGreed(cambioTotal) << endl;
     }
 
-    int cambioGreed(int val){
-
-
-
-    }
 
 	void dinamica(){
         memset(mem, -1, sizeof(mem));
         int cambioTotal = pago - precio;
+        cout << "-----Cambio Dinamico-----" <<endl;
         cout << cambioDin(cambioTotal) << endl;
+        imprimir(listMon);
     }
 
     int cambioDin(int val){ //Valor del pago
@@ -55,7 +53,9 @@ class Actividad12{
         int cantidad = na; //Cantidad de monedas a devolver
         for (int i = 0; i < num; i++){
             cantidad = min(cantidad, cambioDin(val - monedas[i]));
+            listMon.push_back(monedas[i]);
         }
+
         return mem[val] = cantidad + 1;
     }
 
@@ -85,7 +85,6 @@ class Actividad12{
 int main(){
     Actividad12 act;
     act.obtenerDatos();
+    act.dinamica();
     act.greedy();
-    //act.dinamica();
-
 }
