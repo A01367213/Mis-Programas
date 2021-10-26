@@ -12,9 +12,7 @@ def estafa(nCoin,cValue):
                     return False
                 if cValue[i]>100:
                     return False
-            
-            
-                
+
             if (rCoin)==0:
                 mCoin=(nCoin/2)
                 return int(mCoin + 1)
@@ -25,8 +23,7 @@ def estafa(nCoin,cValue):
             return False
     else:
         return False
-        
-    
+
 
 def main():
 
