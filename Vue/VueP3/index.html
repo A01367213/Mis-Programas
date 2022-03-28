@@ -28,7 +28,8 @@
       <!-- Event: v-once -->
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <!-- Event: v-on:input -->
+      <!-- Event: v-on:input 
+                  $event is used when having two or more arguments-->
       <input type="text" 
              v-on:input="setName($event, 'Lamas')" 
              v-on:keyup.enter="confirmInput">
